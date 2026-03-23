@@ -102,7 +102,7 @@ button {
     /*background: #22326b;*/
     background: #001352;
     min-width: 120px;
-    margin: 8px 0;
+    margin: 16px 0;
     padding: 16px;
     color: #fff;
     border: none;
@@ -123,7 +123,7 @@ img {
 
 footer {
     background: #fff;
-    padding-top: 40px;
+    padding-top: 56px;
     justify-content: space-between;
     align-items: flex-end;
 
@@ -164,16 +164,7 @@ input, select, textarea {
 }
 
 .flex {
-    display: flex;
-    margin-bottom: 80px;
 
-    & > div {
-        /*width: 50%;*/
-    }
-
-    div + div {
-        margin-left: 36px;
-    }
 }
 
 .header {
@@ -182,11 +173,7 @@ input, select, textarea {
     padding-top: 180px;
 }
 
-.image-side {
-    width: 40%;
-    max-width: 600px;
-    min-width: 300px;
-}
+
 
 .schedule {
     margin-top: 18px;
@@ -214,6 +201,23 @@ input, select, textarea {
     }
 }
 
-@media screen and (min-width: 980px) {
+@media screen and (min-width: 780px) {
+    .flex {
+        display: flex;
+        margin-bottom: 80px;
 
+        & > div {
+            /*width: 50%;*/
+        }
+
+        div + div {
+            margin-left: 36px;
+        }
+    }
+
+    .image-side {
+        width: 40%;
+        max-width: 600px;
+        min-width: 300px;
+    }
 }
