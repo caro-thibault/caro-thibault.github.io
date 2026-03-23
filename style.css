@@ -24,6 +24,7 @@ body {
     /*background: #566fa8 url("bg.png") no-repeat fixed;*/
     background: #566fa8 url("flowers2.png") no-repeat fixed;
     background-position-x: right;
+    background-position-y: bottom;
     background-size: contain;
 
     color: white;
@@ -178,12 +179,20 @@ input, select, textarea {
 .header {
     justify-content: space-around;
     align-items: center;
-    padding-top: 120px;
+    padding-top: 180px;
 }
 
 .image-side {
     width: 40%;
     max-width: 600px;
+    min-width: 300px;
+}
+
+.schedule {
+    margin-top: 18px;
+    img {
+        margin: 16px 0;
+    }
 }
 
 .info {
