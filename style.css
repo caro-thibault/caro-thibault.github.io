@@ -7,7 +7,7 @@
 html, body {
     height: 100%;
     /*width: 100%;*/
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Merriweather Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 @font-face {
@@ -26,7 +26,7 @@ body {
     background-position-x: right;
     background-position-y: bottom;
     background-size: contain;
-    font-size: 20px;
+    font-size: 18px;
 
     color: white;
     /*padding: 20px;*/
@@ -37,7 +37,7 @@ body {
 }
 
 h1, h2, h3, h4, h5 {
-    font-family: serif;
+    font-family: "Playfair Display", serif;
     color: #001352;
     /*font-weight: 800;*/
     margin-bottom: 16px;
@@ -60,7 +60,6 @@ h3 {
 a {
     color: #fff;
     text-decoration-line: none;
-    padding: 0 8px;
 
     &:hover {
         color: #7e9aff;
@@ -68,8 +67,7 @@ a {
 }
 
 p {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    line-height: 1.75rem;
+    line-height: 1.95rem;
 }
 
 nav {
@@ -89,6 +87,8 @@ nav {
         font-size: 20px;
         font-weight: 700;
         letter-spacing: 2px;
+        padding: 0 8px;
+
     }
 }
 
@@ -179,6 +179,7 @@ label {
     justify-content: space-around;
     align-items: center;
     padding-top: 160px;
+
 }
 
 
@@ -348,6 +349,20 @@ label {
     .image-side {
         max-width: 600px;
         min-width: 560px;
+    }
+
+    .flex {
+        div + div {
+            margin-left: 100px;
+        }
+    }
+}
+
+
+@media screen and (min-width: 1280px) {
+    .image-side {
+        max-width: 800px;
+        min-width: 600px;
     }
 
     .flex {
