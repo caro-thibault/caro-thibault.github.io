@@ -112,6 +112,7 @@ button {
 
     &:hover {
         background: #7e9aff;
+	cursor: pointer;
     }
 }
 
