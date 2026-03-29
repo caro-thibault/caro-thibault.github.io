@@ -47,7 +47,8 @@
                 />
             </div>
 
-            <div class="form-group" style="margin-bottom: 16px;">
+
+            <div class="form-group">
                 <label>Are you bringing your partner?</label>
                 <div class="radio-group">
                     <label>
@@ -68,14 +69,14 @@
                 </select>
             </div>
 
-            <div class="form-group" style="margin-bottom: 16px;">
-                <label>Should we arrange transportation for you?</label>
+            <div class="form-group">
+                <label>Will you require organized wedding transportation?</label>
                 <div class="radio-group">
                     <label>
-                        <input type="radio" name="transportation" value="yes" required /> I would likely use organized wedding transportation
+                        <input type="radio" name="transportation" value="yes" required /> Yes
                     </label>
                     <label>
-                        <input type="radio" name="transportation" value="no" required /> I plan to arrange my own transportation
+                        <input type="radio" name="transportation" value="no" required /> No
                     </label>
                 </div>
             </div>
@@ -102,6 +103,38 @@
         form.addEventListener("submit", (e) => {
           e.preventDefault();
           var formData = new FormData(form);
+
+          console.log(formData)
+          console.log(form)
+
+          // var name = document.getElementById("name").checked;
+          // var email = document.getElementById("email").checked;
+          // var plusOne = document.getElementById("plus_one").checked;
+          // var food = document.getElementById("food").checked;
+          //
+          // if (name) {
+          //   formData.append("name", "Yes");
+          // } else {
+          //   formData.append("name", "No");
+          // }
+          //
+          // if (age) {
+          //   formData.append("age", "Yes");
+          // } else {
+          //   formData.append("age", "No");
+          // }
+          //
+          // if (plusOne) {
+          //   formData.append("plus-one", "Yes");
+          // } else {
+          //   formData.append("plus-one", "No");
+          // }
+          //
+          // if (food) {
+          //   formData.append("food", "Yes");
+          // } else {
+          //   formData.append("food", "No");
+          // }
 
           fetch(scriptURL, { method: "POST", body: new URLSearchParams(new FormData(form)), mode: 'no-cors' })
 
