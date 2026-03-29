@@ -155,25 +155,30 @@
             </button>
         </form>
 
-      <script>
-        const scriptURL =
-        "https://script.google.com/macros/s/AKfycbzYNEw7_sJXkbHzKj2edzd3vR7fgVjoxq4715iCWof40ujFXDbusjv7jF68HdpB2gtz/exec";
-        const form = document.forms["submit-to-google-sheet"];
-        form.addEventListener("submit", (e) => {
-          e.preventDefault();
-          var formData = new FormData(form);
+        <script>
+          const scriptURL =
+                      "https://script.google.com/macros/s/AKfycbzYNEw7_sJXkbHzKj2edzd3vR7fgVjoxq4715iCWof40ujFXDbusjv7jF68HdpB2gtz/exec";
+          const form = document.forms["submit-to-google-sheet"];
+          const submitBtn = form.querySelector('button[type="submit"]');
 
+          form.addEventListener("submit", (e) => {
+            e.preventDefault();
 
-          fetch(scriptURL, { method: "POST", body: new URLSearchParams(new FormData(form)), mode: 'no-cors' })
+            submitBtn.disabled = true;
+            submitBtn.textContent = "Submitting...";
 
-            .then((response) => {
-                console.log(formData)
-              swal("Geschafft!", "Erfolgreich an Caro & Thibault übermittelt! :)", "success", formData);
-            })
-            .catch((error) => {
-              swal("Error", "Something went wrong. please try again!", "error");
-            });
-        });
-      </script>
+            fetch(scriptURL, { method: "POST", body: new URLSearchParams(new FormData(form)), mode: 'no-cors' })
+              .then((response) => {
+                swal("Geschafft!", "Erfolgreich an Caro & Thibault übermittelt :)", "success");
+                submitBtn.textContent = "Submitted";
+              })
+              .catch((error) => {
+                swal("Fehler", "Etwas ist schief gelaufen. Bitte probier es später noch einmal!", "error");
+                // Re-enable only on error so they can retry
+                submitBtn.disabled = false;
+                submitBtn.textContent = "Submit";
+              });
+          });
+    </script>
     </body>
 </html>
