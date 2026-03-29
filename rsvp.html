@@ -68,7 +68,6 @@
                         name="name_plus_one"
                         id="name_plus_one"
                         placeholder="Name of partner"
-                        required
                 />
             </div>
 
@@ -89,7 +88,6 @@
                         name="allergies"
                         id="allergies"
                         placeholder="Allergies"
-                        required
                 />
             </div>
 
@@ -112,9 +110,16 @@
                         name="message"
                         id="message"
                         placeholder="Message"
-                        required
                 ></textarea>
             </div>
+
+            <div class="form-group" style="display: none">
+                <label for="language"></label>
+                <select class="form-control" name="language" id="language">
+                    <option value="" selected hidden>EN</option>
+                </select>
+            </div>
+
             <button type="submit" class="btn btn-primary btn-block">
                 Submit
             </button>
