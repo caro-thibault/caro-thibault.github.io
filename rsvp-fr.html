@@ -35,92 +35,121 @@
                         required
                 />
             </div>
-            <div class="form-group">
-                <label for="email">Email :</label>
-                <input
-                        class="form-control"
-                        type="email"
-                        name="email"
-                        id="email"
-                        placeholder="Email"
-                        required
-                />
-            </div>
 
             <div class="form-group">
-                <label for="food">Plat principal ?</label>
-                <select class="form-control" name="food" id="food" required>
-                    <option value="" disabled selected hidden>Choisissez...</option>
-                    <option value="vegetarian">Végétarien</option>
-                    <option value="meat">Viande</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label for="allergies">Avez-vous des allergies alimentaires ?</label>
-                <input
-                        class="form-control"
-                        type="text"
-                        name="allergies"
-                        id="allergies"
-                        placeholder="Allergies"
-                        required
-                />
-            </div>
-
-
-            <div class="form-group">
-                <label>Viendrez-vous accompagné(e) de votre partenaire ?</label>
+                <label>Seras-tu présent(e) à notre mariage le 20 juin 2026 ?</label>
                 <div class="radio-group">
                     <label>
-                        <input type="radio" name="plus_one" value="yes" id="plus-one-yes" required /> Oui
+                        <input type="radio" name="attending" value="yes" id="attending" required /> Yes
                     </label>
                     <label>
-                        <input type="radio" name="plus_one" value="no" required /> Non
+                        <input type="radio" name="attending" value="no" required /> No
                     </label>
                 </div>
             </div>
 
-            <div class="form-group plus-one-name">
-                <label for="name_plus_one">Nom de votre partenaire :</label>
-                <input
-                        class="form-control"
-                        type="text"
-                        name="name_plus_one"
-                        id="name_plus_one"
-                        placeholder="Nom de votre partenaire"
-                        required
-                />
-            </div>
-
-            <div class="form-group">
-                <label>Avez-vous besoin d'un transport organisé du lieu de réception à votre hôtel (à partir de minuit) ?</label>
-                <div class="radio-group">
-                    <label>
-                        <input type="radio" name="transportation" value="yes" required /> Oui
-                    </label>
-                    <label>
-                        <input type="radio" name="transportation" value="no" required /> Non
-                    </label>
+            <section class="will-attend">
+                <div class="form-group">
+                    <label for="email">Email :</label>
+                    <input
+                            class="form-control"
+                            type="email"
+                            name="email"
+                            id="email"
+                            placeholder="Email"
+                    />
                 </div>
-            </div>
 
-            <div class="form-group">
-                <label for="message">Remarques supplémentaires :</label>
-                <textarea
-                        class="form-control"
-                        name="message"
-                        id="message"
-                        placeholder="Message"
-                        required
-                ></textarea>
-            </div>
+                <div class="form-group">
+                    <label for="food">Choix du plat principal ?</label>
+                    <select class="form-control" name="food" id="food" >
+                        <option value="" disabled selected hidden>Choisissez...</option>
+                        <option value="vegetarian">Végétarien</option>
+                        <option value="meat">Viande</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="allergies">Avez-vous des allergies alimentaires ?</label>
+                    <input
+                            class="form-control"
+                            type="text"
+                            name="allergies"
+                            id="allergies"
+                            placeholder="Allergies"
+                    />
+                </div>
+
+                <div class="form-group">
+                    <label>Viendrez-vous accompagné(e) de votre partenaire ?</label>
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="plus_one" value="yes" id="plus-one-yes"  /> Oui
+                        </label>
+                        <label>
+                            <input type="radio" name="plus_one" value="no"  /> Non
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group partner">
+                    <label for="name_plus_one">Nom de votre partenaire :</label>
+                    <input
+                            class="form-control"
+                            type="text"
+                            name="name_plus_one"
+                            id="name_plus_one"
+                            placeholder="Nom de votre partenaire"
+                    />
+                </div>
+
+                <div class="form-group partner">
+                    <label for="food_partner">Choix du plat principal pour votre partenaire ?</label>
+                    <select class="form-control" name="food_partner" id="food_partner" >
+                        <option value="" disabled selected hidden>Choose...</option>
+                        <option value="vegetarian">Vegetarian</option>
+                        <option value="meat">Meat</option>
+                    </select>
+                </div>
+
+                <div class="form-group partner">
+                    <label for="allergies_partner">Votre partenaire a-t-il des allergies alimentaires ?</label>
+                    <input
+                            class="form-control"
+                            type="text"
+                            name="allergies_partner"
+                            id="allergies_partner"
+                            placeholder="Allergies"
+                    />
+                </div>
+
+                <div class="form-group">
+                    <label>Avez-vous besoin d'un transport organisé du lieu de réception à votre hôtel (à partir de minuit) ?</label>
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="transportation" value="yes"  /> Oui
+                        </label>
+                        <label>
+                            <input type="radio" name="transportation" value="no"  /> Non
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Remarques supplémentaires :</label>
+                    <textarea
+                            class="form-control"
+                            name="message"
+                            id="message"
+                            placeholder="Remarques supplémentaires"
+                    ></textarea>
+                </div>
+            </section>
 
             <div class="form-group" style="display: none">
-                <label for="language"></label>
-                <select class="form-control" name="language" id="language">
-                    <option value="" selected hidden>FR</option>
-                </select>
+                <label>
+                    <input type="radio" name="language" value="FR" checked />
+                </label>
             </div>
 
             <button type="submit" class="btn btn-primary btn-block">
