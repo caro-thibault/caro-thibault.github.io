@@ -104,38 +104,6 @@
           e.preventDefault();
           var formData = new FormData(form);
 
-          console.log(formData)
-          console.log(form)
-
-          // var name = document.getElementById("name").checked;
-          // var email = document.getElementById("email").checked;
-          // var plusOne = document.getElementById("plus_one").checked;
-          // var food = document.getElementById("food").checked;
-          //
-          // if (name) {
-          //   formData.append("name", "Yes");
-          // } else {
-          //   formData.append("name", "No");
-          // }
-          //
-          // if (age) {
-          //   formData.append("age", "Yes");
-          // } else {
-          //   formData.append("age", "No");
-          // }
-          //
-          // if (plusOne) {
-          //   formData.append("plus-one", "Yes");
-          // } else {
-          //   formData.append("plus-one", "No");
-          // }
-          //
-          // if (food) {
-          //   formData.append("food", "Yes");
-          // } else {
-          //   formData.append("food", "No");
-          // }
-
           fetch(scriptURL, { method: "POST", body: new URLSearchParams(new FormData(form)), mode: 'no-cors' })
 
             .then((response) => {
