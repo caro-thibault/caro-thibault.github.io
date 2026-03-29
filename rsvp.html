@@ -25,7 +25,7 @@
 <!--            <fieldset class="border-4 border-dotted border-indigo-500 p-5">-->
 <!--            <legend class="px-2 italic -mx-2">Welcome again!</legend>-->
             <div class="form-group">
-                <label for="name">Name:</label>
+                <label for="name">First & last name:</label>
                 <input
                         class="form-control"
                         type="text"
@@ -52,12 +52,24 @@
                 <label>Are you bringing your partner?</label>
                 <div class="radio-group">
                     <label>
-                        <input type="radio" name="plus_one" value="yes" required /> Yes
+                        <input type="radio" name="plus_one" value="yes" id="plus-one-yes" required /> Yes
                     </label>
                     <label>
                         <input type="radio" name="plus_one" value="no" required /> No
                     </label>
                 </div>
+            </div>
+
+            <div class="form-group plus-one-name">
+                <label for="name_plus_one">Name of partner:</label>
+                <input
+                        class="form-control"
+                        type="text"
+                        name="name_plus_one"
+                        id="name_plus_one"
+                        placeholder="Name of partner"
+                        required
+                />
             </div>
 
             <div class="form-group">
@@ -67,6 +79,18 @@
                     <option value="meat">Meat</option>
                     <option value="vegetarian">Vegetarian</option>
                 </select>
+            </div>
+
+            <div class="form-group">
+                <label for="allergies">Allergies?</label>
+                <input
+                        class="form-control"
+                        type="text"
+                        name="allergies"
+                        id="allergies"
+                        placeholder="Allergies"
+                        required
+                />
             </div>
 
             <div class="form-group">
@@ -82,7 +106,7 @@
             </div>
 
             <div class="form-group">
-                <label for="message">Message:</label>
+                <label for="message">Additional remarks or message:</label>
                 <textarea
                         class="form-control"
                         name="message"
@@ -104,37 +128,6 @@
           e.preventDefault();
           var formData = new FormData(form);
 
-          console.log(formData)
-          console.log(form)
-
-          // var name = document.getElementById("name").checked;
-          // var email = document.getElementById("email").checked;
-          // var plusOne = document.getElementById("plus_one").checked;
-          // var food = document.getElementById("food").checked;
-          //
-          // if (name) {
-          //   formData.append("name", "Yes");
-          // } else {
-          //   formData.append("name", "No");
-          // }
-          //
-          // if (age) {
-          //   formData.append("age", "Yes");
-          // } else {
-          //   formData.append("age", "No");
-          // }
-          //
-          // if (plusOne) {
-          //   formData.append("plus-one", "Yes");
-          // } else {
-          //   formData.append("plus-one", "No");
-          // }
-          //
-          // if (food) {
-          //   formData.append("food", "Yes");
-          // } else {
-          //   formData.append("food", "No");
-          // }
 
           fetch(scriptURL, { method: "POST", body: new URLSearchParams(new FormData(form)), mode: 'no-cors' })
 

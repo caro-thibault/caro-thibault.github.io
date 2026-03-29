@@ -12,8 +12,8 @@
             <div>
                 <a href="index.html">Home</a>
 <!--                <a href="info.html">Practical information</a>-->
-                <a href="rsvp.html">
-                    <img class="nav-flag" src="https://upload.wikimedia.org/wikipedia/commons/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg" alt="EN" />
+                <a href="rsvp-de.html">
+                  <img class="nav-flag" src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Flag_of_Germany.svg" alt="DE" />
                 </a>
                 <a href="rsvp-fr.html">
                     <img class="nav-flag" src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_France.svg"
@@ -25,7 +25,7 @@
 <!--            <fieldset class="border-4 border-dotted border-indigo-500 p-5">-->
 <!--            <legend class="px-2 italic -mx-2">Welcome again!</legend>-->
             <div class="form-group">
-                <label for="name">Name:</label>
+                <label for="name">First & last name:</label>
                 <input
                         class="form-control"
                         type="text"
@@ -47,16 +47,29 @@
                 />
             </div>
 
-            <div class="form-group" style="margin-bottom: 16px;">
-                <label>Bringst du jemanden mit?</label>
+
+            <div class="form-group">
+                <label>Are you bringing your partner?</label>
                 <div class="radio-group">
                     <label>
-                        <input type="radio" name="plus_one" value="yes" required /> Yes
+                        <input type="radio" name="plus_one" value="yes" id="plus-one-yes" required /> Yes
                     </label>
                     <label>
                         <input type="radio" name="plus_one" value="no" required /> No
                     </label>
                 </div>
+            </div>
+
+            <div class="form-group plus-one-name">
+                <label for="name_plus_one">Name of partner:</label>
+                <input
+                        class="form-control"
+                        type="text"
+                        name="name_plus_one"
+                        id="name_plus_one"
+                        placeholder="Name of partner"
+                        required
+                />
             </div>
 
             <div class="form-group">
@@ -68,20 +81,32 @@
                 </select>
             </div>
 
-            <div class="form-group" style="margin-bottom: 16px;">
-                <label>Should we arrange transportation for you?</label>
+            <div class="form-group">
+                <label for="allergies">Allergies?</label>
+                <input
+                        class="form-control"
+                        type="text"
+                        name="allergies"
+                        id="allergies"
+                        placeholder="Allergies"
+                        required
+                />
+            </div>
+
+            <div class="form-group">
+                <label>Will you require organized wedding transportation?</label>
                 <div class="radio-group">
                     <label>
-                        <input type="radio" name="transportation" value="yes" required /> I would likely use organized wedding transportation
+                        <input type="radio" name="transportation" value="yes" required /> Yes
                     </label>
                     <label>
-                        <input type="radio" name="transportation" value="no" required /> I plan to arrange my own transportation
+                        <input type="radio" name="transportation" value="no" required /> No
                     </label>
                 </div>
             </div>
 
             <div class="form-group">
-                <label for="message">Message:</label>
+                <label for="message">Additional remarks or message:</label>
                 <textarea
                         class="form-control"
                         name="message"
@@ -102,6 +127,7 @@
         form.addEventListener("submit", (e) => {
           e.preventDefault();
           var formData = new FormData(form);
+
 
           fetch(scriptURL, { method: "POST", body: new URLSearchParams(new FormData(form)), mode: 'no-cors' })
 

@@ -239,9 +239,17 @@ label {
     width: 20px;
 }
 
-
 .form-group {
     margin-bottom: 36px;
+}
+
+.form-group.plus-one-name {
+  display: none;
+}
+
+/* Show when "Yes" is selected */
+.form-group:has(#plus-one-yes:checked) + .plus-one-name {
+  display: block;
 }
 
 @media screen and (min-width: 768px) {
