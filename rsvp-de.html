@@ -55,7 +55,7 @@
                             type="email"
                             name="email"
                             id="email"
-                            placeholder="Email"
+                            placeholder="E-Mail"
 
                     />
                 </div>
@@ -76,7 +76,7 @@
                             type="text"
                             name="allergies"
                             id="allergies"
-                            placeholder="Allergies"
+                            placeholder="Allergien"
                     />
                 </div>
 
@@ -99,7 +99,7 @@
                             type="text"
                             name="name_plus_one"
                             id="name_plus_one"
-                            placeholder="Name of partner"
+                            placeholder="Name der Begleitung"
                     />
                 </div>
 
@@ -141,7 +141,7 @@
                             class="form-control"
                             name="message"
                             id="message"
-                            placeholder="Message"
+                            placeholder="Anmerkungen"
                     ></textarea>
                 </div>
             </section>
@@ -170,7 +170,7 @@
 
             .then((response) => {
                 console.log(formData)
-              swal("Done", "Submitted successfully.", "success", formData);
+              swal("Geschafft!", "Erfolgreich an Caro & Thibault übermittelt! :)", "success", formData);
             })
             .catch((error) => {
               swal("Error", "Something went wrong. please try again!", "error");

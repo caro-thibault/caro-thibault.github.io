@@ -154,7 +154,7 @@ label {
 
 
 textarea {
-    min-height: 20px;
+    min-height: 25px;
 }
 
 
@@ -223,7 +223,7 @@ textarea {
 }
 
 label {
-    font-weight: 800;
+    font-weight: 700;
 }
 
 .radio-group label {
@@ -282,6 +282,10 @@ form:has(#name:not(:placeholder-shown)):has(input[name="attending"][value="yes"]
     opacity: 1;
     pointer-events: auto;
 }
+
+
+
+
 
 @media screen and (min-width: 768px) {
     nav {
