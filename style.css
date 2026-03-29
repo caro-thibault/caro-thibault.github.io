@@ -26,6 +26,7 @@ body {
     background-position-x: right;
     background-position-y: bottom;
     background-size: contain;
+    font-size: 20px;
 
     color: white;
     /*padding: 20px;*/
@@ -68,7 +69,7 @@ a {
 
 p {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    line-height: 1.5rem;
+    line-height: 1.75rem;
 }
 
 nav {
@@ -81,7 +82,7 @@ nav {
     justify-content: space-between;
     background: #566fa8;
     border-bottom: 1px solid #fff;
-    padding: 24px 48px;
+    padding: 12px 24px;
 
     a {
         font-variant: all-small-caps;
@@ -102,7 +103,7 @@ button {
     /*background: #22326b;*/
     background: #001352;
     min-width: 120px;
-    margin: 8px 0;
+    margin: 16px 0;
     padding: 16px;
     color: #fff;
     border: none;
@@ -117,14 +118,13 @@ button {
 
 img {
     max-width: 100vw;
-    max-height: 800px;
     border-radius: 300px;
     width: 100%;
 }
 
 footer {
     background: #fff;
-    padding-top: 40px;
+    padding-top: 56px;
     justify-content: space-between;
     align-items: flex-end;
 
@@ -134,13 +134,20 @@ footer {
 }
 
 form {
-
+    padding-top: 180px;
 }
 
 input, select, textarea {
     width: 100%;
+    height: 40px;
     padding: 8px;
-    margin: 2px 0 16px 0;
+    margin: 12px 0 24px 0;
+    border-radius: 4px;
+    border: none;
+}
+
+label {
+    color: #001352;
 }
 
 
@@ -165,32 +172,19 @@ input, select, textarea {
 }
 
 .flex {
-    display: flex;
-    margin-bottom: 80px;
 
-    & > div {
-        /*width: 50%;*/
-    }
-
-    div + div {
-        margin-left: 36px;
-    }
 }
 
 .header {
     justify-content: space-around;
     align-items: center;
-    padding-top: 180px;
+    padding-top: 160px;
 }
 
-.image-side {
-    width: 40%;
-    max-width: 600px;
-    min-width: 300px;
-}
 
 .schedule {
     margin-top: 18px;
+
     img {
         margin: 16px 0;
     }
@@ -215,6 +209,151 @@ input, select, textarea {
     }
 }
 
-@media screen and (min-width: 980px) {
-
+.radio-group {
+    display: flex;
+    gap: 20px;
 }
+
+label {
+    font-weight: 800;
+}
+
+.radio-group label {
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.radio-group input {
+    margin: 0;
+    width: 20px;
+}
+
+.check {
+  cursor: pointer;
+  position: relative;
+  margin: auto;
+  width: 18px;
+  height: 18px;
+  -webkit-tap-highlight-color: transparent;
+  transform: translate3d(0, 0, 0);
+}
+
+.check:before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(34, 50, 84, 0.03);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.check svg {
+  position: relative;
+  z-index: 1;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: #c8ccd4;
+  stroke-width: 1.5;
+  transform: translate3d(0, 0, 0);
+  transition: all 0.2s ease;
+}
+
+.check svg path {
+  stroke-dasharray: 60;
+  stroke-dashoffset: 0;
+}
+
+.check svg polyline {
+  stroke-dasharray: 22;
+  stroke-dashoffset: 66;
+}
+
+.check:hover:before {
+  opacity: 1;
+}
+
+.check:hover svg {
+  /*stroke: var(--accent-color, #a3e583);*/
+  stroke: #a3e583;
+}
+
+#cbx2:checked + .check svg {
+  /*stroke: var(--accent-color, #a3e583);*/
+  stroke: #a3e583;
+}
+
+#cbx2:checked + .check svg path {
+  stroke-dashoffset: 60;
+  transition: all 0.3s linear;
+}
+
+#cbx2:checked + .check svg polyline {
+  stroke-dashoffset: 42;
+  transition: all 0.2s linear;
+  transition-delay: 0.15s;
+}
+
+@media screen and (min-width: 768px) {
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #566fa8;
+        border-bottom: 1px solid #fff;
+        padding: 24px 48px;
+
+        a {
+            font-variant: all-small-caps;
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+    }
+
+    img {
+        max-height: 800px;
+    }
+
+
+    .flex {
+        display: flex;
+        margin-bottom: 80px;
+
+        & > div {
+            /*width: 50%;*/
+        }
+
+        div + div {
+            margin-left: 36px;
+        }
+    }
+
+    .image-side {
+        width: 40%;
+        max-width: 600px;
+        min-width: 400px;
+    }
+}
+
+
+@media screen and (min-width: 1024px) {
+    .image-side {
+        max-width: 600px;
+        min-width: 560px;
+    }
+
+    .flex {
+        div + div {
+            margin-left: 100px;
+        }
+    }
+}
+
