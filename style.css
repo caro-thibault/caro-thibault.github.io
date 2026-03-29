@@ -261,18 +261,26 @@ label {
 }
 
 button[type="submit"] {
-  opacity: 0.5;
-  pointer-events: none;
+    opacity: 0.5;
+    pointer-events: none;
 }
 
-form:has(input[name="attending"][value="no"]:checked) button[type="submit"] {
-  opacity: 1;
-  pointer-events: auto;
+/* Path A: name + attending = no */
+form:has(#name:not(:placeholder-shown)):has(input[name="attending"][value="no"]:checked) button[type="submit"] {
+    opacity: 1;
+    pointer-events: auto;
 }
 
-form:has(input[name="attending"][value="yes"]:checked):has(.will-attend:valid) button[type="submit"] {
-  opacity: 1;
-  pointer-events: auto;
+/* Path B, no partner: name + yes + email + food + plus_one=no + transportation */
+form:has(#name:not(:placeholder-shown)):has(input[name="attending"][value="yes"]:checked):has(#email:not(:placeholder-shown)):has(#food:valid):has(input[name="plus_one"][value="no"]:checked):has(input[name="transportation"]:checked) button[type="submit"] {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Path B, with partner: same + partner name + partner food */
+form:has(#name:not(:placeholder-shown)):has(input[name="attending"][value="yes"]:checked):has(#email:not(:placeholder-shown)):has(#food:valid):has(input[name="plus_one"][value="yes"]:checked):has(#name_plus_one:not(:placeholder-shown)):has(#food_partner:valid):has(input[name="transportation"]:checked) button[type="submit"] {
+    opacity: 1;
+    pointer-events: auto;
 }
 
 @media screen and (min-width: 768px) {
