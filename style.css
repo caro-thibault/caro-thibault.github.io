@@ -243,13 +243,36 @@ label {
     margin-bottom: 36px;
 }
 
-.form-group.plus-one-name {
+.form-group.partner {
   display: none;
 }
 
-/* Show when "Yes" is selected */
-.form-group:has(#plus-one-yes:checked) + .plus-one-name {
+.form-group:has(#plus-one-yes:checked) ~ .partner {
   display: block;
+}
+
+
+.will-attend {
+    display: none;
+}
+
+.form-group:has(#attending:checked) + .will-attend {
+  display: block;
+}
+
+button[type="submit"] {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+form:has(input[name="attending"][value="no"]:checked) button[type="submit"] {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+form:has(input[name="attending"][value="yes"]:checked):has(.will-attend:valid) button[type="submit"] {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 @media screen and (min-width: 768px) {
