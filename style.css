@@ -106,6 +106,7 @@ button {
     padding: 12px 24px 16px;
     color: #fff;
     border: none;
+    letter-spacing: 3px;
 
     &:hover {
         background: #7e9aff;
