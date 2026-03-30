@@ -97,14 +97,15 @@ nav {
 }
 
 button {
-    font-family: serif;
-    font-size: 18px;
+    font-family: "Playfair Display", serif;
+    font-size: 20px;
+    font-variant: all-small-caps;
     /*font-weight: 100;*/
     /*background: #22326b;*/
     background: #001352;
     min-width: 120px;
     margin: 16px 0;
-    padding: 16px;
+    padding: 12px 24px 16px;
     color: #fff;
     border: none;
     /*border: 1px solid #000;*/
