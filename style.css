@@ -132,7 +132,7 @@ footer {
 }
 
 form {
-    padding-top: 180px;
+    padding-top: 150px !important;
 }
 
 input, select, textarea {
@@ -295,7 +295,11 @@ form:has(#name:not(:placeholder-shown)):has(input[name="attending"][value="yes"]
 @media screen and (max-width: 767px) {
     nav {
         span {
-            max-width: 50%;
+            max-width: 45%;
+        }
+
+        a {
+            letter-spacing: 0;
         }
     }
 
@@ -344,7 +348,9 @@ form:has(#name:not(:placeholder-shown)):has(input[name="attending"][value="yes"]
         max-height: 800px;
     }
 
-
+    form {
+        padding-top: 180px !important;
+    }
     .flex {
         display: flex;
         margin-bottom: 80px;
