@@ -283,6 +283,10 @@ form:has(#name:not(:placeholder-shown)):has(input[name="attending"][value="yes"]
 
 
 @media screen and (max-width: 767px) {
+    body {
+        background-size: 300px;
+    }
+
     nav {
         span {
             max-width: 50%;
@@ -297,11 +301,9 @@ form:has(#name:not(:placeholder-shown)):has(input[name="attending"][value="yes"]
 }
 
 
-
-
 @media screen and (min-width: 768px) {
     body {
-        background-size: 300px;
+        background-size: 400px;
 
         & > * {
             padding: 48px;
