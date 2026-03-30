@@ -100,16 +100,12 @@ button {
     font-family: "Playfair Display", serif;
     font-size: 20px;
     font-variant: all-small-caps;
-    /*font-weight: 100;*/
-    /*background: #22326b;*/
     background: #001352;
     min-width: 120px;
     margin: 16px 0;
     padding: 12px 24px 16px;
     color: #fff;
     border: none;
-    /*border: 1px solid #000;*/
-    /*border-radius: 8px;*/
 
     &:hover {
         background: #7e9aff;
