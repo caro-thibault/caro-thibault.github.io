@@ -25,7 +25,7 @@ body {
     background: #566fa8 url("flowers2.png") no-repeat fixed;
     background-position-x: right;
     background-position-y: bottom;
-    background-size: contain;
+    background-size: 200px;
     font-size: 18px;
 
     color: white;
@@ -283,10 +283,6 @@ form:has(#name:not(:placeholder-shown)):has(input[name="attending"][value="yes"]
 
 
 @media screen and (max-width: 767px) {
-    body {
-        background-size: 300px;
-    }
-
     nav {
         span {
             max-width: 50%;
