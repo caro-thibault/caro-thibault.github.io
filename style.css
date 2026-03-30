@@ -32,7 +32,7 @@ body {
     /*padding: 20px;*/
 
     & > * {
-        padding: 48px;
+        padding: 24px;
     }
 }
 
@@ -282,10 +282,32 @@ form:has(#name:not(:placeholder-shown)):has(input[name="attending"][value="yes"]
 }
 
 
+@media screen and (max-width: 767px) {
+    nav {
+        span {
+            max-width: 50%;
+        }
+    }
+
+    .flex {
+        div + div {
+            margin-top: 24px;
+        }
+    }
+}
+
 
 
 
 @media screen and (min-width: 768px) {
+    body {
+        background-size: 300px;
+
+        & > * {
+            padding: 48px;
+        }
+    }
+
     nav {
         display: flex;
         align-items: center;
