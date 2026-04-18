@@ -1,184 +1,187 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <link rel="stylesheet" href="style.css">
-        <title>Mariage de Caro & Thibault</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico">
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather+Sans:300|Merriweather+Sans:700|Playfair+Display">
-    </head>
-    <body>
-        <nav>
-            <span class="logo"><i class="fancy">Caroline & Thibault</i></span>
-            <div>
-                <a href="index-fr.html">Accueil</a>
-<!--                <a href="info.html">Practical information</a>-->
-                <a href="rsvp.html">
-                    <img class="nav-flag" src="https://upload.wikimedia.org/wikipedia/commons/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg" alt="EN" />
-                </a>
-                <a href="rsvp-de.html">
-                    <img class="nav-flag" src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Flag_of_Germany.svg" alt="DE" />
-                </a>
-            </div>
-        </nav>
-        <form id="submit-to-google-sheet">
-            <div class="form-group">
-                <label for="name">Prénom & nom :</label>
-                <input
-                        class="form-control"
-                        type="text"
-                        name="name"
-                        id="name"
-                        placeholder="Nom"
-                        required
-                />
-            </div>
+<head>
+    <link rel="stylesheet" href="/style.css">
+    <title>Caro & Thibault's wedding</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather+Sans:300|Merriweather+Sans:800|Playfair+Display">
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+    
+</head>
+<body>
+    
 
-            <div class="form-group">
-                <label>Seras-tu présent(e) à notre mariage le 20 juin 2026 ?</label>
-                <div class="radio-group">
-                    <label>
-                        <input type="radio" name="attending" value="yes" id="attending" required /> Oui
-                    </label>
-                    <label>
-                        <input type="radio" name="attending" value="no" required /> Non
-                    </label>
-                </div>
-            </div>
 
-            <section class="will-attend">
-                <div class="form-group">
-                    <label for="email">Email :</label>
-                    <input
-                            class="form-control"
-                            type="email"
-                            name="email"
-                            id="email"
-                            placeholder="Email"
-                    />
-                </div>
 
-                <div class="form-group">
-                    <label for="food">Choix du plat principal ?</label>
-                    <select class="form-control" name="food" id="food" >
-                        <option value="vegetarian" selected>Végétarien</option>
-                        <option value="meat">Viande</option>
-                    </select>
-                </div>
 
-                <div class="form-group">
-                    <label for="allergies">Avez-vous des allergies alimentaires ?</label>
-                    <input
-                            class="form-control"
-                            type="text"
-                            name="allergies"
-                            id="allergies"
-                            placeholder="Allergies"
-                    />
-                </div>
 
-                <div class="form-group">
-                    <label>Viendrez-vous accompagné(e) de votre partenaire ?</label>
-                    <div class="radio-group">
-                        <label>
-                            <input type="radio" name="plus_one" value="yes" id="plus-one-yes"  /> Oui
-                        </label>
-                        <label>
-                            <input type="radio" name="plus_one" value="no"  /> Non
-                        </label>
-                    </div>
-                </div>
 
-                <div class="form-group partner">
-                    <label for="name_plus_one">Nom de votre partenaire :</label>
-                    <input
-                            class="form-control"
-                            type="text"
-                            name="name_plus_one"
-                            id="name_plus_one"
-                            placeholder="Nom de votre partenaire"
-                    />
-                </div>
+<nav>
+    <span class="logo"><i class="fancy">Caroline & Thibault</i></span>
+    <div>
+        <a href="/index-fr.html">Accueil</a>
+        <a href="/rsvp-fr.html">RSVP</a>
+        
+        <a href="/info-fr.html">Informations pratiques</a>
+        
+        
+        <a href="/gift-fr.html">Liste de cadeaux</a>
+        
+        
+        <a href="/rsvp.html">
+            <img class="nav-flag" src="https://upload.wikimedia.org/wikipedia/commons/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg" alt="EN" />
+        </a>
+        
+        
+        <a href="/rsvp-de.html">
+            <img class="nav-flag" src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Flag_of_Germany.svg" alt="DE" />
+        </a>
+        
+        
+    </div>
+</nav>
 
-                <div class="form-group partner">
-                    <label for="food_partner">Choix du plat principal pour votre partenaire ?</label>
-                    <select class="form-control" name="food_partner" id="food_partner" >
-                        <option value="vegetarian" selected>Végétarien</option>
-                        <option value="meat">Viande</option>
-                    </select>
-                </div>
+    
 
-                <div class="form-group partner">
-                    <label for="allergies_partner">Votre partenaire a-t-il des allergies alimentaires ?</label>
-                    <input
-                            class="form-control"
-                            type="text"
-                            name="allergies_partner"
-                            id="allergies_partner"
-                            placeholder="Allergies"
-                    />
-                </div>
+<form id="submit-to-google-sheet">
+    <div class="form-group">
+        <label for="name">Prénom & nom :</label>
+        <input class="form-control" type="text" name="name" id="name"
+               placeholder="Nom" required />
+    </div>
 
-                <div class="form-group">
-                    <label>Avez-vous besoin d'un transport organisé du lieu de réception à votre hôtel (à partir de minuit) ?</label>
-                    <div class="radio-group">
-                        <label>
-                            <input type="radio" name="transportation" value="yes"  /> Oui
-                        </label>
-                        <label>
-                            <input type="radio" name="transportation" value="no"  /> Non
-                        </label>
-                    </div>
-                </div>
+    <div class="form-group">
+        <label>Seras-tu présent(e) à notre mariage le 20 juin 2026 ?</label>
+        <div class="radio-group">
+            <label>
+                <input type="radio" name="attending" value="yes" id="attending" required /> 
+            </label>
+            <label>
+                <input type="radio" name="attending" value="no" required /> 
+            </label>
+        </div>
+    </div>
 
-                <div class="form-group">
-                    <label for="message">Remarques supplémentaires :</label>
-                    <textarea
-                            class="form-control"
-                            name="message"
-                            id="message"
-                            placeholder="Remarques supplémentaires"
-                    ></textarea>
-                </div>
-            </section>
+    <section class="will-attend">
+        <div class="form-group">
+            <label for="email">Email :</label>
+            <input class="form-control" type="email" name="email" id="email"
+                   placeholder="Email" />
+        </div>
 
-            <div class="form-group" style="display: none">
+        <div class="form-group">
+            <label for="food">Choix du plat principal ?</label>
+            <select class="form-control" name="food" id="food">
+                <option value="vegetarian" selected>Végétarien</option>
+                <option value="meat">Viande</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="allergies">Avez-vous des allergies alimentaires ?</label>
+            <input class="form-control" type="text" name="allergies" id="allergies"
+                   placeholder="Allergies" />
+        </div>
+
+        <div class="form-group">
+            <label>Viendrez-vous accompagné(e) de votre partenaire ?</label>
+            <div class="radio-group">
                 <label>
-                    <input type="radio" name="language" value="FR" checked />
+                    <input type="radio" name="plus_one" value="yes" id="plus-one-yes" /> 
+                </label>
+                <label>
+                    <input type="radio" name="plus_one" value="no" /> 
                 </label>
             </div>
+        </div>
 
-            <button type="submit" class="btn btn-primary btn-block">
-                Envoyer
-            </button>
-        </form>
+        <div class="form-group partner">
+            <label for="name_plus_one">Nom de votre partenaire :</label>
+            <input class="form-control" type="text" name="name_plus_one" id="name_plus_one"
+                   placeholder="Nom de votre partenaire" />
+        </div>
 
-        <script>
-          const scriptURL =
-                      "https://script.google.com/macros/s/AKfycbzYNEw7_sJXkbHzKj2edzd3vR7fgVjoxq4715iCWof40ujFXDbusjv7jF68HdpB2gtz/exec";
-          const form = document.forms["submit-to-google-sheet"];
-          const submitBtn = form.querySelector('button[type="submit"]');
+        <div class="form-group partner">
+            <label for="food_partner">Choix du plat principal pour votre partenaire ?</label>
+            <select class="form-control" name="food_partner" id="food_partner">
+                <option value="vegetarian" selected>Végétarien</option>
+                <option value="meat">Viande</option>
+            </select>
+        </div>
 
-          form.addEventListener("submit", (e) => {
-            e.preventDefault();
+        <div class="form-group partner">
+            <label for="allergies_partner">Votre partenaire a-t-il des allergies alimentaires ?</label>
+            <input class="form-control" type="text" name="allergies_partner" id="allergies_partner"
+                   placeholder="Allergies" />
+        </div>
 
-            submitBtn.disabled = true;
-            submitBtn.textContent = "Submitting...";
+        <div class="form-group">
+            <label>Avez-vous besoin d'un transport organisé du lieu de réception à votre hôtel (à partir de minuit) ?</label>
+            <div class="radio-group">
+                <label>
+                    <input type="radio" name="transportation" value="yes" /> 
+                </label>
+                <label>
+                    <input type="radio" name="transportation" value="no" /> 
+                </label>
+            </div>
+        </div>
 
-            fetch(scriptURL, { method: "POST", body: new URLSearchParams(new FormData(form)), mode: 'no-cors' })
-              .then((response) => {
-                swal("Confirmé !", "Réponses envoyées à Caro & Thibault :)", "success");
-                submitBtn.textContent = "Submitted";
-              })
-              .catch((error) => {
-                swal("Error", "Something went wrong. Please try again!", "error");
-                // Re-enable only on error so they can retry
-                submitBtn.disabled = false;
-                submitBtn.textContent = "Submit";
-              });
-          });
-    </script>
-    </body>
+        <div class="form-group">
+            <label for="message">Remarques supplémentaires :</label>
+            <textarea class="form-control" name="message" id="message"
+                      placeholder="Remarques supplémentaires"></textarea>
+        </div>
+    </section>
+
+    <div class="form-group" style="display: none">
+        <label>
+            <input type="radio" name="language" value="FR" checked />
+        </label>
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-block">
+        Envoyer
+    </button>
+</form>
+
+<script>
+  const scriptURL = "https://script.google.com/macros/s/AKfycbzYNEw7_sJXkbHzKj2edzd3vR7fgVjoxq4715iCWof40ujFXDbusjv7jF68HdpB2gtz/exec";
+  const form = document.forms["submit-to-google-sheet"];
+  const submitBtn = form.querySelector('button[type="submit"]');
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    submitBtn.disabled = true;
+    submitBtn.textContent = "...";
+
+    fetch(scriptURL, { method: "POST", body: new URLSearchParams(new FormData(form)), mode: 'no-cors' })
+      .then(() => {
+        swal("Confirmé !", "Réponses envoyées à Caro & Thibault :)", "success");
+        submitBtn.textContent = "Envoyer";
+      })
+      .catch(() => {
+        swal("Erreur", "Une erreur s'est produite. Veuillez réessayer !", "error");
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Envoyer";
+      });
+  });
+</script>
+
+
+    
+<footer class="flex">
+    <div>
+        <span><i class="fancy">Caroline & Thibault</i></span>
+        <p class="light-blue">Nous avons hâte de célébrer cette journée spéciale avec vous !</p>
+    </div>
+    <div>
+        <p class="blue">© 2026 Caroline & Thibault</p>
+    </div>
+</footer>
+
+</body>
 </html>

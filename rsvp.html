@@ -1,188 +1,187 @@
 <!DOCTYPE html>
-<html lang="EN">
-    <head>
-        <link rel="stylesheet" href="style.css">
-        <title>Caro & Thibault's wedding</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico">
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather+Sans:300|Merriweather+Sans:700|Playfair+Display">
-    </head>
-    <body>
-        <nav>
-            <span class="logo"><i class="fancy">Caroline & Thibault</i></span>
-            <div>
-                <a href="index.html">Home</a>
-<!--                <a href="info.html">Practical information</a>-->
-                <a href="rsvp-de.html">
-                  <img class="nav-flag" src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Flag_of_Germany.svg" alt="DE" />
-                </a>
-                <a href="rsvp-fr.html">
-                    <img class="nav-flag" src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_France.svg"
-                         alt="FR"/>
-                </a>
-            </div>
-        </nav>
-        <form id="submit-to-google-sheet">
-<!--            <fieldset class="border-4 border-dotted border-indigo-500 p-5">-->
-<!--            <legend class="px-2 italic -mx-2">Welcome again!</legend>-->
-            <div class="form-group">
-                <label for="name">First & last name:</label>
-                <input
-                        class="form-control"
-                        type="text"
-                        name="name"
-                        id="name"
-                        placeholder="Name"
-                        required
-                />
-            </div>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/style.css">
+    <title>Caro & Thibault's wedding</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather+Sans:300|Merriweather+Sans:800|Playfair+Display">
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+    
+</head>
+<body>
+    
 
-            <div class="form-group">
-                <label>Will you attend our wedding on 20th June 2026?</label>
-                <div class="radio-group">
-                    <label>
-                        <input type="radio" name="attending" value="yes" id="attending" required /> Yes
-                    </label>
-                    <label>
-                        <input type="radio" name="attending" value="no" required /> No
-                    </label>
-                </div>
-            </div>
 
-            <section class="will-attend">
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input
-                            class="form-control"
-                            type="email"
-                            name="email"
-                            id="email"
-                            placeholder="Email"
 
-                    />
-                </div>
 
-                <div class="form-group">
-                    <label for="food">Choice of main dish?</label>
-                    <select class="form-control" name="food" id="food" >
-                        <option value="vegetarian" selected>Vegetarian</option>
-                        <option value="meat">Meat</option>
-                    </select>
-                </div>
 
-                <div class="form-group">
-                    <label for="allergies">Do you have food allergies?</label>
-                    <input
-                            class="form-control"
-                            type="text"
-                            name="allergies"
-                            id="allergies"
-                            placeholder="Allergies"
-                    />
-                </div>
 
-                <div class="form-group">
-                    <label>Are you bringing your partner?</label>
-                    <div class="radio-group">
-                        <label>
-                            <input type="radio" name="plus_one" value="yes" id="plus-one-yes"  /> Yes
-                        </label>
-                        <label>
-                            <input type="radio" name="plus_one" value="no"  /> No
-                        </label>
-                    </div>
-                </div>
+<nav>
+    <span class="logo"><i class="fancy">Caroline & Thibault</i></span>
+    <div>
+        <a href="/index.html">Home</a>
+        <a href="/rsvp.html">RSVP</a>
+        
+        <a href="/info.html">Practical information</a>
+        
+        
+        <a href="/gift.html">Gift list</a>
+        
+        
+        
+        <a href="/rsvp-de.html">
+            <img class="nav-flag" src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Flag_of_Germany.svg" alt="DE" />
+        </a>
+        
+        
+        <a href="/rsvp-fr.html">
+            <img class="nav-flag" src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_France.svg" alt="FR" />
+        </a>
+        
+    </div>
+</nav>
 
-                <div class="form-group partner">
-                    <label for="name_plus_one">Name of partner:</label>
-                    <input
-                            class="form-control"
-                            type="text"
-                            name="name_plus_one"
-                            id="name_plus_one"
-                            placeholder="Name of partner"
-                    />
-                </div>
+    
 
-                <div class="form-group partner">
-                    <label for="food_partner">Choice of main dish for your partner?</label>
-                    <select class="form-control" name="food_partner" id="food_partner" >
-                        <option value="vegetarian" selected>Vegetarian</option>
-                        <option value="meat">Meat</option>
-                    </select>
-                </div>
+<form id="submit-to-google-sheet">
+    <div class="form-group">
+        <label for="name">First & last name:</label>
+        <input class="form-control" type="text" name="name" id="name"
+               placeholder="Name" required />
+    </div>
 
-                <div class="form-group partner">
-                    <label for="allergies_partner">Does your partner have allergies?</label>
-                    <input
-                            class="form-control"
-                            type="text"
-                            name="allergies_partner"
-                            id="allergies_partner"
-                            placeholder="Allergies"
-                    />
-                </div>
+    <div class="form-group">
+        <label>Will you attend our wedding on 20th June 2026?</label>
+        <div class="radio-group">
+            <label>
+                <input type="radio" name="attending" value="yes" id="attending" required /> 
+            </label>
+            <label>
+                <input type="radio" name="attending" value="no" required /> 
+            </label>
+        </div>
+    </div>
 
-                <div class="form-group">
-                    <label>Will you require organized wedding transportation from the château to your hotel (from midnight on)?</label>
-                    <div class="radio-group">
-                        <label>
-                            <input type="radio" name="transportation" value="yes"  /> Yes
-                        </label>
-                        <label>
-                            <input type="radio" name="transportation" value="no"  /> No
-                        </label>
-                    </div>
-                </div>
+    <section class="will-attend">
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input class="form-control" type="email" name="email" id="email"
+                   placeholder="Email" />
+        </div>
 
-                <div class="form-group">
-                    <label for="message">Additional remarks or message:</label>
-                    <textarea
-                            class="form-control"
-                            name="message"
-                            id="message"
-                            placeholder="Message"
-                    ></textarea>
-                </div>
-            </section>
+        <div class="form-group">
+            <label for="food">Choice of main dish?</label>
+            <select class="form-control" name="food" id="food">
+                <option value="vegetarian" selected>Vegetarian</option>
+                <option value="meat">Meat</option>
+            </select>
+        </div>
 
-            <div class="form-group" style="display: none">
+        <div class="form-group">
+            <label for="allergies">Do you have food allergies?</label>
+            <input class="form-control" type="text" name="allergies" id="allergies"
+                   placeholder="Allergies" />
+        </div>
+
+        <div class="form-group">
+            <label>Are you bringing your partner?</label>
+            <div class="radio-group">
                 <label>
-                    <input type="radio" name="language" value="EN" checked />
+                    <input type="radio" name="plus_one" value="yes" id="plus-one-yes" /> 
+                </label>
+                <label>
+                    <input type="radio" name="plus_one" value="no" /> 
                 </label>
             </div>
+        </div>
 
-            <button type="submit" class="btn btn-primary btn-block">
-                Submit
-            </button>
-        </form>
+        <div class="form-group partner">
+            <label for="name_plus_one">Name of partner:</label>
+            <input class="form-control" type="text" name="name_plus_one" id="name_plus_one"
+                   placeholder="Name of partner" />
+        </div>
 
-        <script>
-          const scriptURL =
-                      "https://script.google.com/macros/s/AKfycbzYNEw7_sJXkbHzKj2edzd3vR7fgVjoxq4715iCWof40ujFXDbusjv7jF68HdpB2gtz/exec";
-          const form = document.forms["submit-to-google-sheet"];
-          const submitBtn = form.querySelector('button[type="submit"]');
+        <div class="form-group partner">
+            <label for="food_partner">Choice of main dish for your partner?</label>
+            <select class="form-control" name="food_partner" id="food_partner">
+                <option value="vegetarian" selected>Vegetarian</option>
+                <option value="meat">Meat</option>
+            </select>
+        </div>
 
-          form.addEventListener("submit", (e) => {
-            e.preventDefault();
+        <div class="form-group partner">
+            <label for="allergies_partner">Does your partner have allergies?</label>
+            <input class="form-control" type="text" name="allergies_partner" id="allergies_partner"
+                   placeholder="Allergies" />
+        </div>
 
-            submitBtn.disabled = true;
-            submitBtn.textContent = "Submitting...";
+        <div class="form-group">
+            <label>Will you require organized wedding transportation from the château to your hotel (from midnight on)?</label>
+            <div class="radio-group">
+                <label>
+                    <input type="radio" name="transportation" value="yes" /> 
+                </label>
+                <label>
+                    <input type="radio" name="transportation" value="no" /> 
+                </label>
+            </div>
+        </div>
 
-            fetch(scriptURL, { method: "POST", body: new URLSearchParams(new FormData(form)), mode: 'no-cors' })
-              .then((response) => {
-                swal("Done!", "Submitted successfully to Caro & Thibault :)", "success");
-                submitBtn.textContent = "Submitted";
-              })
-              .catch((error) => {
-                swal("Error", "Something went wrong. Please try again!", "error");
-                // Re-enable only on error so they can retry
-                submitBtn.disabled = false;
-                submitBtn.textContent = "Submit";
-              });
-          });
-    </script>
-    </body>
+        <div class="form-group">
+            <label for="message">Additional remarks or message:</label>
+            <textarea class="form-control" name="message" id="message"
+                      placeholder="Message"></textarea>
+        </div>
+    </section>
+
+    <div class="form-group" style="display: none">
+        <label>
+            <input type="radio" name="language" value="EN" checked />
+        </label>
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-block">
+        Submit
+    </button>
+</form>
+
+<script>
+  const scriptURL = "https://script.google.com/macros/s/AKfycbzYNEw7_sJXkbHzKj2edzd3vR7fgVjoxq4715iCWof40ujFXDbusjv7jF68HdpB2gtz/exec";
+  const form = document.forms["submit-to-google-sheet"];
+  const submitBtn = form.querySelector('button[type="submit"]');
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    submitBtn.disabled = true;
+    submitBtn.textContent = "...";
+
+    fetch(scriptURL, { method: "POST", body: new URLSearchParams(new FormData(form)), mode: 'no-cors' })
+      .then(() => {
+        swal("Done!", "Submitted successfully to Caro & Thibault :)", "success");
+        submitBtn.textContent = "Submit";
+      })
+      .catch(() => {
+        swal("Error", "Something went wrong. Please try again!", "error");
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Submit";
+      });
+  });
+</script>
+
+
+    
+<footer class="flex">
+    <div>
+        <span><i class="fancy">Caroline & Thibault</i></span>
+        <p class="light-blue">We are looking forward to celebrating our special day together with you!</p>
+    </div>
+    <div>
+        <p class="blue">© 2026 Caroline & Thibault</p>
+    </div>
+</footer>
+
+</body>
 </html>
