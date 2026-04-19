@@ -132,6 +132,7 @@ footer {
 }
 
 form {
+    min-height: calc(100vh - 206px);
     padding-top: 180px !important;
 }
 
@@ -502,6 +503,7 @@ form:has(#name:not(:placeholder-shown)):has(input[name="attending"][value="yes"]
 
     form {
         padding-top: 180px !important;
+        min-height: calc(100vh - 180px);
     }
 
     .flex {
