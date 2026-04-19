@@ -110,7 +110,7 @@ button {
 
     &:hover {
         background: #7e9aff;
-	cursor: pointer;
+        cursor: pointer;
     }
 }
 
@@ -242,11 +242,11 @@ label {
 }
 
 .form-group.partner {
-  display: none;
+    display: none;
 }
 
 .form-group:has(#plus-one-yes:checked) ~ .partner {
-  display: block;
+    display: block;
 }
 
 
@@ -255,7 +255,7 @@ label {
 }
 
 .form-group:has(#attending:checked) + .will-attend {
-  display: block;
+    display: block;
 }
 
 button[type="submit"] {
@@ -319,6 +319,77 @@ form:has(#name:not(:placeholder-shown)):has(input[name="attending"][value="yes"]
 }
 
 
+.gift-list {
+    list-style: none;
+    margin-top: 24px;
+}
+
+.gift-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    gap: 12px;
+}
+
+.gift-item:last-child {
+    border-bottom: none;
+}
+
+.gift-emoji {
+    font-size: 1.4rem;
+    width: 2rem;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.gift-amount {
+    font-family: "Playfair Display", serif;
+    font-size: 1.1rem;
+    color: #b1c3ff;
+    width: 3.5rem;
+    flex-shrink: 0;
+}
+
+.gift-desc {
+    font-size: 0.95rem;
+    color: #fff;
+}
+
+.gift-ornament {
+    font-size: 1.2rem;
+    letter-spacing: 0.8rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.gift-tagline {
+    font-family: "Playfair Display", serif;
+    font-size: 2rem;
+    font-weight: 100;
+    color: #b1c3ff;
+    text-align: center;
+    line-height: 1.4;
+    margin-bottom: 0.5rem;
+}
+
+.gift-subtitle {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.65);
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.gift-closing {
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #b1c3ff;
+    margin-top: 32px;
+    line-height: 1.7;
+}
+
+
 @media screen and (min-width: 768px) {
     body {
         background-size: 400px;
@@ -352,6 +423,7 @@ form:has(#name:not(:placeholder-shown)):has(input[name="attending"][value="yes"]
     form {
         padding-top: 180px !important;
     }
+
     .flex {
         display: flex;
         margin-bottom: 80px;
