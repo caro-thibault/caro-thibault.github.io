@@ -443,7 +443,6 @@ form:has(#name:not(:placeholder-shown)):has(input[name="attending"][value="yes"]
         color: #001352;
         display: inline-block;
         margin-top: 12px;
-        font-size: 0.9rem;
         border-bottom: 1px solid #7e9aff;
 
         &:hover {
