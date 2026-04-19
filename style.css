@@ -389,6 +389,86 @@ form:has(#name:not(:placeholder-shown)):has(input[name="attending"][value="yes"]
     line-height: 1.7;
 }
 
+.hotel-grid {
+    margin-top: 28px;
+    margin-left: 0 !important;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr;
+
+    .hotel-card {
+        margin-left: 0 !important;
+    }
+}
+
+.hotel-card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px 24px;
+    border-radius: 8px;
+
+    h3 {
+        color: #354376;
+        font-size: 1.4rem;
+        margin-bottom: 4px;
+    }
+
+    p {
+        color: #5871af;
+        line-height: 1.7rem;
+    }
+
+    strong {
+        color: #354376;
+    }
+
+    .hotel-meta {
+        font-size: 0.85rem;
+        color: #7e9aff;
+        margin-bottom: 10px;
+    }
+
+    .hotel-badge {
+        display: inline-block;
+        background: #354376;
+        color: #fff;
+        font-size: 0.75rem;
+        padding: 2px 8px;
+        border-radius: 4px;
+        margin-bottom: 10px;
+        letter-spacing: 0.5px;
+    }
+
+    a {
+        color: #001352;
+        display: inline-block;
+        margin-top: 12px;
+        font-size: 0.9rem;
+        border-bottom: 1px solid #7e9aff;
+
+        &:hover {
+            color: #7e9aff;
+        }
+    }
+
+    .hotel-contact a {
+        margin-top: 0;
+        border-bottom: none;
+        font-size: 1rem;
+    }
+
+    .hotel-contact {
+        color: #5871af;
+        font-size: 0.9rem;
+        margin-top: 4px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .hotel-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
 
 @media screen and (min-width: 768px) {
     body {
