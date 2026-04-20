@@ -45,12 +45,12 @@ h1, h2, h3, h4, h5 {
 }
 
 h1 {
-    font-size: 4.5rem;
+    font-size: 4rem;
     color: #b1c3ff;
 }
 
 h2 {
-    font-size: 3.25rem;
+    font-size: 3rem;
 }
 
 h3 {
@@ -499,6 +499,20 @@ form:has(#name:not(:placeholder-shown)):has(input[name="attending"][value="yes"]
     img {
         max-height: 800px;
     }
+
+    h1 {
+        font-size: 4.5rem;
+        color: #b1c3ff;
+    }
+
+    h2 {
+        font-size: 3.25rem;
+    }
+
+    h3 {
+        font-size: 1.75rem;
+    }
+
 
     form {
         padding-top: 180px !important;
